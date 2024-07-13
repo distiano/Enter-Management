@@ -38,7 +38,7 @@ export default function Example() {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-white to-[#FFE4E5] ${isScrolled ? 'bg-opacity-100' : 'bg-opacity-30'}`} style={{ transition: 'background-color 0.3s ease' }}>
+    <header className={`fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-white to-[#A98946] ${isScrolled ? 'bg-opacity-100' : 'bg-opacity-30'}`} style={{ transition: 'background-color 0.3s ease' }}>
       <nav className="flex items-center justify-between p-4 lg:p-2 lg:px-8 shadow-lg" aria-label="Global">
         <div className="flex items-center lg:flex-1 lg:justify-start">
           <button type="button" className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 lg:hidden" onClick={() => setMobileMenuOpen(true)}>
