@@ -2,7 +2,12 @@ import { useState, useEffect } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
-import { Inria_Sans } from 'next/font/google';
+import { Inria_Serif, Inria_Sans } from 'next/font/google';
+
+const inriaserif = Inria_Serif({
+  subsets: ['latin'],
+  weight: ['300', '400', '700'],
+});
 
 const inriasans = Inria_Sans({
   subsets: ['latin'],
@@ -11,9 +16,10 @@ const inriasans = Inria_Sans({
 
 const navigation = [
   { name: 'Home', href: '/home' },
-  { name: 'Services', href: '/services' },
-  { name: 'Portfolio', href: '/portfolio' },
   { name: 'About Us', href: '/about' },
+  { name: 'Portfolio', href: '/portfolio' },
+  { name: 'Price List', href: '/pricelist' },
+
   // { name: 'Portofolio', href: '/portofolio' },
 ];
 
@@ -38,7 +44,7 @@ export default function Example() {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-white to-[#A98946] ${isScrolled ? 'bg-opacity-100' : 'bg-opacity-30'}`} style={{ transition: 'background-color 0.3s ease' }}>
+    <header className={`fixed top-0 left-0 right-0 z-50 ${isScrolled ? 'bg-opacity-100' : 'bg-opacity-30'}`} style={{ transition: 'background-color 0.3s ease', background: 'linear-gradient(90deg, #B4903A, #FFFEA6 50%, #B4903A)' }}>
       <nav className="flex items-center justify-between p-4 lg:p-2 lg:px-8 shadow-lg" aria-label="Global">
         <div className="flex items-center lg:flex-1 lg:justify-start">
           <button type="button" className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 lg:hidden" onClick={() => setMobileMenuOpen(true)}>
@@ -46,12 +52,14 @@ export default function Example() {
             <Bars3Icon className={`h-6 w-6 ${isScrolled ? 'text-black' : 'text-gray-700'}`} aria-hidden="true" />
           </button>
           <div className="absolute left-1/2 transform -translate-x-1/2 lg:static lg:transform-none">
-            <Link href="/">
+            <Link href="/" className="flex items-center">
               <span className="sr-only">Your Company</span>
-              <div className="font-bold text-blue-500">
-                <img src="/images/Logo.png" className="h-12 w-auto" alt="" />
+              <img src="/images/EnterManagementKudus-logo.png" className="h-12 w-auto" alt="Enter Management Kudus Logo" />
+              <div className="ml-4 font-bold text-2xl text-black">
+                <span className={inriaserif.className}>ENTER MANAGEMENT KUDUS</span>
               </div>
             </Link>
+
           </div>
         </div>
         <div className={`hidden lg:flex gap-6 ${inriasans.className}`}>
@@ -60,14 +68,14 @@ export default function Example() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`relative text-black rounded-md px-3 py-2 text-sm font-medium transition-all duration-300 ease-in-out after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-red-500 after:transition-all after:duration-300 hover:after:w-full hover:font-bold`}
+                className={`relative text-black rounded-md px-3 py-2 text-sm font-semibold transition-all duration-300 ease-in-out after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-red-500 after:transition-all after:duration-300 hover:after:w-full hover:font-bold`}
               >
                 {item.name}
               </Link>
             ))}
           </div>
           <div className="lg:flex lg:flex-1 lg:justify-end">
-            <Link href="#" className="bg-[#C00002] px-4 py-2 rounded-lg text-sm font-semibold leading-6 text-white text-center hover:bg-red-800 transition duration-300 ease-in-out">
+            <Link href="#" className="bg-[#94332c] px-4 py-2 rounded-lg text-sm font-semibold leading-6 text-white text-center hover:bg-red-800 transition duration-300 ease-in-out">
               Contact Us
             </Link>
           </div>

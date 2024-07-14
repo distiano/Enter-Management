@@ -31,3 +31,16 @@ body {
     text-wrap: balance;
   }
 } */
+
+.goldenText {
+  background: linear-gradient(90deg, #B4903A, #FFFEA6 50%, #B4903A);
+  color: #4b3c1d;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 30px;
+  border-radius: 50px;
+  display: inline-block;
+  border: 5px solid #d4af37;
+  font-family: Arial, sans-serif;
+}
