@@ -3,6 +3,7 @@ import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { Inria_Serif, Inria_Sans } from 'next/font/google';
+import { usePathname } from 'next/navigation';
 
 const inriaserif = Inria_Serif({
   subsets: ['latin'],
@@ -24,6 +25,7 @@ const navigation = [
 ];
 
 export default function Example() {
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -68,16 +70,16 @@ export default function Example() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`relative text-black rounded-md px-3 py-2 text-sm font-semibold transition-all duration-300 ease-in-out after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-red-500 after:transition-all after:duration-300 hover:after:w-full hover:font-bold`}
+                className={`relative text-black rounded-md px-3 py-2 text-sm font-bold transition-all duration-300 ease-in-out after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#574315ce] after:transition-all after:duration-300 hover:after:w-full hover:font-bold ${pathname === item.href ? 'text-[#574315] font-bold after:w-full' : ''}`}
               >
                 {item.name}
               </Link>
             ))}
           </div>
           <div className="lg:flex lg:flex-1 lg:justify-end">
-            <Link href="#" className="bg-[#94332c] px-4 py-2 rounded-lg text-sm font-semibold leading-6 text-white text-center hover:bg-red-800 transition duration-300 ease-in-out">
+            {/* <Link href="#" className="bg-[#94332c] px-4 py-2 rounded-lg text-sm font-semibold leading-6 text-white text-center hover:bg-red-800 transition duration-300 ease-in-out">
               Contact Us
-            </Link>
+            </Link> */}
           </div>
         </div>
       </nav>

@@ -22,7 +22,7 @@ export default function Home() {
     <>
       <Navbar />{' '}
       <section style={{ backgroundImage: "url('/images/display.png')", backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
-        <div className="h-screen flex items-end pb-24 justify-center bg-gradient-to-b from-[#FF000300] to-[#f1d77b72]  animate__animated animate__fadeIn">
+        <div className="h-screen flex items-end pb-24 justify-center bg-gradient-to-b from-[#FF000300] to-[#f1d77b32]  animate__animated animate__fadeIn">
           <div className="text-center text-white">
             <h1 className="text-3xl lg:text-5xl font-bold animate__animated animate__zoomIn">
               <span className={inriaserif.className}>Sedia Menjaga Momen Penting Anda</span>
