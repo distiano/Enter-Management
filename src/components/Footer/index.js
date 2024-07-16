@@ -1,14 +1,21 @@
+import { Inria_Sans } from 'next/font/google';
+
+const inriasans = Inria_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '700'],
+});
+
 const Footer = () => {
   return (
     <footer className="bg-white px-6 lg:px-16 border-t-4">
-      <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-10 sm:px-6 lg:space-y-16 lg:px-8">
+      <div className={`${inriasans.className} mx-auto max-w-screen-xl space-y-8 px-4 py-10 sm:px-6 lg:space-y-16 lg:px-8`}>
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 ">
           <div>
             <div className="text-teal-600">
               <img src="/images/Logo.png" className="h-12 w-auto" alt="" />
             </div>
 
-            <p className="mt-4 max-w-xs text-gray-500">Jalan XXXXXX No.999 Kelurahan XXXXXXX, Kecamatan XXXXXX, Kab. XXXXXX</p>
+            <p className={` text-black mt-4`}>Purwosari, Kec. Kota Kudus, Kabupaten Kudus, Jawa Tengah 59316 (Enter Management Kudus)</p>
           </div>
 
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2  lg:grid-cols-2">
@@ -67,7 +74,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="flex justify-end items-end gap-4 border-b-4 border-red-800 w-full pb-5">
+          <div className="flex justify-end items-end gap-4 border-b-4 border-black w-full pb-5">
             <img src="/images/Instagram.png" className=" w-auto" alt="" />
             <img src="/images/Whatsapp.png" className=" w-auto" alt="" />
           </div>

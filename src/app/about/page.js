@@ -65,18 +65,25 @@ export default function About() {
   return (
     <>
       <Navbar />
-      <h1 className={`${inriaserif.className} text-4xl text-center pt-28`}>Tentang Enter Management</h1>
+      <section className="">
+        <div className="" style={{ backgroundImage: "url('/images/bannerabout.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+          <div className="min-h-[60vh] flex flex-col justify-center items-center pt-14 text-center ">
+            <h1 className={`${inriaserif.className} text-4xl lg:text-6xl font-bold text-[#E1BB56]`}>ENTER MANAGEMENT</h1>
+            <h2 className={`${inriaserif.className} italic text-[#CCCCCC] text-2xl`}>Professional Wedding & Event Organizer</h2>
+          </div>
+        </div>
+      </section>{' '}
       <section className="py-10">
         <div className="flex space-x-4 overflow-hidden px-2" ref={weddingScrollRef}>
           {duplicatedWeddingCarousel.map((item, idx) => (
-            <div key={idx} className=" flex-shrink-0 py-2 w-[75vw] lg:w-[30vw]">
+            <div key={idx} className=" flex-shrink-0 py-2 w-[60vw] lg:w-[20vw]">
               <img src={item.image} className="text-center text-[#433a33] w-full object-cover" />
             </div>
           ))}
         </div>
         <div className="flex space-x-4 overflow-hidden px-2" ref={eventScrollRef}>
           {duplicatedEventCarousel.map((item, idx) => (
-            <div key={idx} className=" flex-shrink-0 py-2 w-[75vw] lg:w-[30vw]">
+            <div key={idx} className=" flex-shrink-0 py-2 w-[60vw] lg:w-[20vw]">
               <img src={item.image} className="text-center text-[#433a33] w-full object-cover" />
             </div>
           ))}
@@ -85,16 +92,16 @@ export default function About() {
       <section className="px-6 lg:px-28 py-16">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-24">
           <div className="text-center">
-            <h2 className={`${inriaserif.className} text-[#F15254] text-3xl font-bold`}>Mengapa Enter Management Diciptakan?</h2>
-            <p className="mt-6">
+            <h2 className={`${inriaserif.className} text-[#9E7A30] text-3xl font-bold`}>Mengapa Enter Management Diciptakan?</h2>
+            <p className="mt-6 text-justify">
               Lorem ipsum dolor sit amet consectetur. Nunc eget lacus sagittis eget varius elementum scelerisque neque. Nam sem erat ullamcorper sit egestas cursus. Vitae adipiscing proin rutrum sit vivamus augue fames vulputate massa.
               Purus luctus eros turpis eleifend vitae ultricies. Arcu erat duis blandit sed velit enim nec elementum aenean. Adipiscing nulla eu neque nisl faucibus faucibus. Pretium magna condimentum facilisis posuere natoque ultricies
               gravida feugiat nunc. Tincidunt et enim ut lectus non at. Tristique mi quisque ac praesent augue rhoncus donec.
             </p>
           </div>
           <div className="text-center">
-            <h2 className={`${inriaserif.className} text-[#F15254] text-3xl font-bold`}>Apa Saja Layanan Dari Enter Management?</h2>
-            <p className="mt-6">
+            <h2 className={`${inriaserif.className} text-[#9E7A30] text-3xl font-bold`}>Apa Saja Layanan Dari Enter Management?</h2>
+            <p className="mt-6 text-justify">
               Lorem ipsum dolor sit amet consectetur. Nunc eget lacus sagittis eget varius elementum scelerisque neque. Nam sem erat ullamcorper sit egestas cursus. Vitae adipiscing proin rutrum sit vivamus augue fames vulputate massa.
               Purus luctus eros turpis eleifend vitae ultricies. Arcu erat duis blandit sed velit enim nec elementum aenean. Adipiscing nulla eu neque nisl faucibus faucibus. Pretium magna condimentum facilisis posuere natoque ultricies
               gravida feugiat nunc. Tincidunt et enim ut lectus non at. Tristique mi quisque ac praesent augue rhoncus donec.
@@ -104,9 +111,9 @@ export default function About() {
         <div>
           <div className="text-center mt-16">
             <h2 className={`${inriaserif.className}  text-3xl font-bold`}>
-              Mengapa Enter Management Menjadi <span className="text-[#F15254]">Pilihan Terbaik</span> Anda?
+              Mengapa Enter Management Menjadi <span className="text-[#9E7A30]">Pilihan Terbaik</span> Anda?
             </h2>
-            <p className="mt-6">
+            <p className="mt-6 text-justify">
               Lorem ipsum dolor sit amet consectetur. Odio ultrices sem integer duis sollicitudin amet sit. Nisl massa gravida elit sit tempor. Duis sed eu nunc vulputate. Malesuada leo aenean ornare consequat venenatis ut aliquet faucibus
               sit. Orci eget viverra dui tellus nullam feugiat habitasse. Velit vitae molestie orci proin et in. Morbi non aenean ornare viverra. Erat vitae aenean dictumst nibh tellus etiam id consequat turpis. Sed ut varius vel dui felis
               iaculis consequat id. Nec dui amet eget sit neque mi ac. Mattis quis ultrices orci elementum amet et. In montes donec ligula mauris. Hendrerit neque nunc egestas dui magna lectus nunc. Urna urna phasellus lacus adipiscing
@@ -120,7 +127,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="py-16 px-6 lg:px-16 bg-gradient-to-b from-[#FFD6D6] to-white">
+      <section className="py-16 px-6 lg:px-16 bg-gradient-to-b from-[#9E7A30] to-white">
         <h2 className={`${inriaserif.className}  text-3xl font-bold text-center`}>Tim Enter Management</h2>
         <div className="grid  lg:grid-cols-4 gap-8 mt-16">
           <div className="block">
@@ -173,16 +180,49 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="py-16 lg:px-24">
+      {/* <section className="py-16 lg:px-24">
         <div className="relative py-20 rounded-xl" style={{ backgroundImage: "url('/images/bg-footer-barra3.png')", backgroundSize: 'cover', backgroundPosition: 'center', height: '50vh' }}>
           <div className="absolute rounded-xl inset-0 bg-gradient-to-r from-transparent via-[#FED8D8] to-[#FED8D8]"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center lg:text-right flex items-center justify-end h-full">
             <div className="max-w-xl">
-              <h2 className={`${inriaserif.className} text-3xl font-bold text-[#F15254] mb-4`}>Mari Diskusikan Acara Impian Anda Bersama Kami</h2>
-              <Link href="#contact" className={`${inriasans.className} inline-block bg-[#F15254] text-white font-bold py-2 px-4 rounded-lg hover:bg-red-700 transition duration-300`}>
+              <h2 className={`${inriaserif.className} text-3xl font-bold text-[#9E7A30] mb-4`}>Mari Diskusikan Acara Impian Anda Bersama Kami</h2>
+              <Link href="#contact" className={`${inriasans.className} inline-block bg-[#9E7A30] text-white font-bold py-2 px-4 rounded-lg hover:bg-red-700 transition duration-300`}>
                 Contact Us
               </Link>
             </div>
+          </div>
+        </div>
+      </section> */}
+      <section
+        style={{
+          backgroundImage: "url('/images/contactsection_enter.png')",
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+        }}
+        className="py-20"
+      >
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center px-4">
+          <div className="md:w-1/2 p-4">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.6051895810913!2d110.82893880477289!3d-6.81067219005465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTrCsDU4JzIyLjAiUyAxMTDCsDA4JzM1LjgiRQ!5e0!3m2!1sen!2sid!4v1626798427747!5m2!1sen!2sid&z=15"
+              width="100%"
+              height="350"
+              style={{
+                borderRadius: '15px',
+                border: '0',
+              }}
+              allowFullScreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div className="md:w-1/2 p-4">
+            <h2 className="text-4xl font-bold mb-4 text-[#6F541E]">Hubungi Kami</h2>
+            <p className="text-lg font-semibold text-[#6F541E] mb-2">Alamat</p>
+            <p className="text-[#D1A240] mb-4">Purwosari, Kec. Kota Kudus, Kabupaten Kudus, Jawa Tengah 59316 (Enter Management Kudus)</p>
+            <p className="text-lg font-semibold text-[#6F541E] mb-2">Pemesan</p>
+            <p className="text-[#D1A240] mb-4">0856 4106 4464 (Owner)</p>
+            <p className="text-[#D1A240]">0852 9094 3434 (Admin)</p>
           </div>
         </div>
       </section>

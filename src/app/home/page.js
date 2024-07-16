@@ -38,180 +38,146 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section
         style={{
           backgroundImage: "url('/images/background_about.png')",
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
-          height: '90vh'
         }}
-        className="flex items-center justify-center py-20 bg-gray-100 relative"
+        className="flex items-center justify-center  bg-gray-100 relative"
       >
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row-reverse items-center space-y-8 md:space-y-0 md:space-x-8 px-4">
-          <div className="md:w-2/3">
-            <h2 className="text-5xl font-extrabold mb-4">ENTER MANAGEMENT</h2>
-            <p className="text-gray-700 font-semibold leading-relaxed text-justify">
-              Lorem ipsum dolor sit amet consectetur. Non sed nunc est
-              phasellus. Condimentum ultricies feugiat duis arcu at. Habitant
-              pharetra commodo consectetur donec. Libero tellus viverra ac ac
-              quis fringilla et. Parturient quam quis justo tortor dictumst
-              turpis elit tellus. Praesent enim ultricies tempus nunc. Ut amet
-              morbi condimentum ut sagittis dignissim fermentum at ultricies.
-              Nullam turpis nibh turpis ultricies. Accumsan viverra nibh
-              imperdiet quam commodo nibh quam.
+        <div className=" mx-auto grid md:grid-cols-2 pt-4 items-center px-4 lg:px-20">
+          <div className="md:order-2 bg-[#EEEEEEB2] p-4 lg:p-10 rounded-xl">
+            <h2 className={`${inriaserif.className} text-4xl font-extrabold mb-8 text-center`}>ENTER MANAGEMENT</h2>
+            <p className={`${inriasans.className} xl:text-xl leading-relaxed text-justify`}>
+              Lorem ipsum dolor sit amet consectetur. Non sed nunc est phasellus. Condimentum ultricies feugiat duis arcu at. Habitant pharetra commodo consectetur donec. Libero tellus viverra ac ac quis fringilla et. Parturient quam quis
+              justo tortor dictumst turpis elit tellus. Praesent enim ultricies tempus nunc. Ut amet morbi condimentum ut sagittis dignissim fermentum at ultricies. Nullam turpis nibh turpis ultricies. Accumsan viverra nibh imperdiet quam
+              commodo nibh quam.
             </p>
           </div>
 
-          <div className="absolute bottom-0 left-20">
-            <Image
-              src="/images/arif_enter.png"
-              alt="Arif Enter"
-              width={450}
-              height={500}
-            />
+          <div className="md:order-1 lg:ms-10">
+            <Image src="/images/arif_enter.png" alt="Arif Enter" width={450} height={500} />
           </div>
         </div>
       </section>
+      <div style={{ background: 'linear-gradient(135deg, #B79C55, #ffffff)' }}>
+        <section className="py-10 text-center">
+          <div className="goldenText text-xl lg:text-3xl mb-5">
+            <span className={inriaserif.className}>PAKET LAYANAN KAMI</span>
+          </div>
+          <p className=" lg:text-lg px-4 mb-10 font-medium text-white">
+            <span className={inriaserif.className}>Enter Management selalu memberikan pelayanan maksimal untuk hasil yang berkualitas</span>
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 px-4 lg:px-32">
+            <div className="relative">
+              <Image src="/images/Layanan 1.png" alt="Wedding Party" width={500} height={250} className="rounded-xl shadow-xl  border-4 border-yellow-600" />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70 rounded-xl"></div>
+              <div className={`${inriaserif.className} absolute inset-0 flex items-end bottom-3 justify-center text-white text-2xl font-bold`}>Wedding Party</div>{' '}
+            </div>
 
-      <section className="py-10 text-center" style={{ background: 'linear-gradient(135deg, #92413C, #683430)' }}>
-
-        <div className="goldenText mb-5">
-          <span className={inriaserif.className}>PAKET LAYANAN KAMI</span>
-        </div>
-        <p className="text-lg mb-10 font-medium text-white"><span className={inriaserif.className}>Enter Management selalu memberikan pelayanan maksimal untuk hasil yang berkualitas</span></p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 px-4 lg:px-32">
-          <div className="relative">
-            <Image
-              src="/images/Layanan 1.png"
-              alt="Wedding Party"
-              width={500}
-              height={250}
-              className="rounded-xl shadow-xl  border-4 border-yellow-600"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70 rounded-xl"></div>
-            <div className="absolute bottom-4 left-4 text-white text-2xl font-bold">
-              Wedding Party
+            <div className="relative">
+              <Image src="/images/Layanan 2.png" alt="Wedding Party" width={500} height={250} className="rounded-xl shadow-xl  border-4 border-yellow-600" />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70 rounded-xl"></div>
+              <div className={`${inriaserif.className} absolute inset-0 flex items-end bottom-3 justify-center text-white text-2xl font-bold`}>Birthday Party</div>
+            </div>
+            <div className="relative">
+              <Image src="/images/Layanan 3.png" alt="Wedding Party" width={500} height={250} className="rounded-xl shadow-xl  border-4 border-yellow-600" />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70 rounded-xl"></div>
+              <div className={`${inriaserif.className} absolute inset-0 flex items-end bottom-3 justify-center text-white text-2xl font-bold`}>Event Gathering</div>
+            </div>
+            <div className="relative">
+              <Image src="/images/Layanan 4.png" alt="Wedding Party" width={500} height={250} className="rounded-xl shadow-xl  border-4 border-yellow-600" />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70 rounded-xl"></div>
+              <div className={`${inriaserif.className} absolute inset-0 flex items-end bottom-3 justify-center text-white text-2xl font-bold`}>All Event / Pesta</div>
+            </div>
+            <div className="relative">
+              <Image src="/images/Layanan 5.png" alt="Wedding Party" width={500} height={250} className="rounded-xl shadow-xl  border-4 border-yellow-600" />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70 rounded-xl"></div>
+              <div className={`${inriaserif.className} absolute inset-0 flex items-end bottom-3 justify-center text-white text-2xl font-bold`}>Hiburan Artis Ibukota</div>
+            </div>
+            <div className="relative">
+              <Image src="/images/Layanan 6.png" alt="Wedding Party" width={500} height={250} className="rounded-xl shadow-xl  border-4 border-yellow-600" />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70 rounded-xl"></div>
+              <div className={`${inriaserif.className} absolute inset-0 flex items-end bottom-3 justify-center text-white text-2xl font-bold`}>Jasa Wedding Party</div>
+            </div>
+          </div>
+        </section>
+        <section className="py-10 text-white text-center ">
+          <div className="px-4">
+            <div className="goldenText text-xl lg:text-3xl mb-5">
+              <span className={inriaserif.className}>ALL CONCEPT & COSTUME</span>
             </div>
           </div>
 
-          <div className="relative">
-            <Image
-              src="/images/Layanan 2.png"
-              alt="Wedding Party"
-              width={500}
-              height={250}
-              className="rounded-xl shadow-xl  border-4 border-yellow-600"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70 rounded-xl"></div>
-            <div className="absolute bottom-4 left-4 text-white text-2xl font-bold">
-              Birthday Party
+          <div className="px-2 lg:px-20">
+            <img src="/images/KostumDanKonsep.png" alt="Wedding Party" className="rounded-lg w-full" />
+          </div>
+          <div className="px-4">
+            <div className="goldenText text-xl lg:text-3xl mt-20 mb-5">
+              <span className={inriaserif.className}>PROFESIONAL ARTIST MANAGEMENT</span>
             </div>
           </div>
-          <div className="relative">
-            <Image
-              src="/images/Layanan 3.png"
-              alt="Wedding Party"
-              width={500}
-              height={250}
-              className="rounded-xl shadow-xl  border-4 border-yellow-600"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70 rounded-xl"></div>
-            <div className="absolute bottom-4 left-4 text-white text-2xl font-bold">
-              Event Gathering
+
+          <p className="lg:text-lg px-4 font-medium text-black mb-10">
+            <span className={inriaserif.className}>Kami sudah berpengalaman mendatangkan artis lokal hingga nasional untuk mewujudkan acara impianmu</span>
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-4 lg:px-32">
+            <div>
+              <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full">
+                <span className={inriaserif.className}>Charlie Van Houten (ST 12)</span>
+              </button>
+              <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full">
+                <span className={inriaserif.className}>Pasha Ungu</span>
+              </button>
+              <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full">
+                <span className={inriaserif.className}>Tasya Rosmala</span>
+              </button>
+              <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full">
+                <span className={inriaserif.className}>Elly Sugigi</span>
+              </button>
+              <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full">
+                <span className={inriaserif.className}>Difarina Indra</span>
+              </button>
+            </div>
+            <div>
+              <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full">
+                <span className={inriaserif.className}>Mandala Abadi Shoji</span>
+              </button>
+              <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full">
+                <span className={inriaserif.className}>Niken Salindri</span>
+              </button>
+              <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full">
+                <span className={inriaserif.className}>Juwita Bahar</span>
+              </button>
+              <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full">
+                <span className={inriaserif.className}>Yeni Inka</span>
+              </button>
+              <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full">
+                <span className={inriaserif.className}>Nassar Sungkar</span>
+              </button>
+            </div>
+            <div>
+              <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full">
+                <span className={inriaserif.className}>Zaskia Gotik, Dll.</span>
+              </button>
+              <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full">
+                <span className={inriaserif.className}>Wali Band</span>
+              </button>
+              <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full">
+                <span className={inriaserif.className}>Jihan Audy</span>
+              </button>
+              <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full">
+                <span className={inriaserif.className}>Trisuaka</span>
+              </button>
             </div>
           </div>
-          <div className="relative">
-            <Image
-              src="/images/Layanan 4.png"
-              alt="Wedding Party"
-              width={500}
-              height={250}
-              className="rounded-xl shadow-xl  border-4 border-yellow-600"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70 rounded-xl"></div>
-            <div className="absolute bottom-4 left-4 text-white text-2xl font-bold">
-              All Event / Pesta
-            </div>
-          </div>
-          <div className="relative">
-            <Image
-              src="/images/Layanan 5.png"
-              alt="Wedding Party"
-              width={500}
-              height={250}
-              className="rounded-xl shadow-xl  border-4 border-yellow-600"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70 rounded-xl"></div>
-            <div className="absolute bottom-4 left-4 text-white text-2xl font-bold">
-              Hiburan Artis Ibukota
-            </div>
-          </div>
-          <div className="relative">
-            <Image
-              src="/images/Layanan 6.png"
-              alt="Wedding Party"
-              width={500}
-              height={250}
-              className="rounded-xl shadow-xl  border-4 border-yellow-600"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70 rounded-xl"></div>
-            <div className="absolute bottom-4 left-4 text-white text-2xl font-bold">
-              Jasa Wedding Party
-            </div>
-          </div>
-        </div>
-
-
-      </section>
-
-      <section className="py-10 text-white text-center" style={{ background: 'linear-gradient(135deg, #B79C55, #ffffff)' }}>
-
-        <div className="goldenText mb-5">
-          <span className={inriaserif.className}>ALL CONCEPT & COSTUME</span>
-        </div>
-        <div className="px-20">
-          <img src="/images/KostumDanKonsep.png" alt="Wedding Party" className="rounded-lg w-full" />
-        </div>
-
-        <div className="goldenText mt-20 mb-5">
-          <span className={inriaserif.className}>PROFESIONAL ARTIST MANAGEMENT</span>
-        </div>
-        <p className="text-lg font-medium text-black mb-10"><span className={inriaserif.className}>Kami sudah berpengalaman mendatangkan artis lokal hingga nasional untuk mewujudkan acara impianmu</span></p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-4 lg:px-32">
-          <div>
-            <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full"><span className={inriaserif.className}>Charlie Van Houten (ST 12)</span></button>
-            <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full"><span className={inriaserif.className}>Pasha Ungu</span></button>
-            <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full"><span className={inriaserif.className}>Tasya Rosmala</span></button>
-            <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full"><span className={inriaserif.className}>Elly Sugigi</span></button>
-            <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full"><span className={inriaserif.className}>Difarina Indra</span></button>
-          </div>
-          <div>
-            <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full"><span className={inriaserif.className}>Mandala Abadi Shoji</span></button>
-            <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full"><span className={inriaserif.className}>Niken Salindri</span></button>
-            <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full"><span className={inriaserif.className}>Juwita Bahar</span></button>
-            <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full"><span className={inriaserif.className}>Yeni Inka</span></button>
-            <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full"><span className={inriaserif.className}>Nassar Sungkar</span></button>
-          </div>
-          <div>
-            <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full"><span className={inriaserif.className}>Zaskia Gotik, Dll.</span></button>
-            <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full"><span className={inriaserif.className}>Wali Band</span></button>
-            <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full"><span className={inriaserif.className}>Jihan Audy</span></button>
-            <button className="bg-gradient-to-r from-[#B64C45] to-[#561a0b] text-white font-semibold px-4 py-2 rounded-3xl mb-2 w-full"><span className={inriaserif.className}>Trisuaka</span></button>
-          </div>
-        </div>
-
-      </section>
-
+        </section>
+      </div>
       <section className="text-center">
-
-
-
         <img src="/images/ENTER MANAGEMENT_ARTIS.png" alt="Wedding Party" className="rounded-lg w-full" />
-
       </section>
-
       <section
         style={{
           backgroundImage: "url('/images/contactsection_enter.png')",
@@ -234,24 +200,17 @@ export default function Home() {
               allowFullScreen=""
               loading="lazy"
             ></iframe>
-
           </div>
           <div className="md:w-1/2 p-4">
             <h2 className="text-4xl font-bold mb-4 text-[#6F541E]">Hubungi Kami</h2>
             <p className="text-lg font-semibold text-[#6F541E] mb-2">Alamat</p>
-            <p className="text-[#D1A240] mb-4">
-              Purwosari, Kec. Kota Kudus, Kabupaten Kudus, Jawa Tengah 59316 (Enter Management Kudus)
-            </p>
+            <p className="text-[#D1A240] mb-4">Purwosari, Kec. Kota Kudus, Kabupaten Kudus, Jawa Tengah 59316 (Enter Management Kudus)</p>
             <p className="text-lg font-semibold text-[#6F541E] mb-2">Pemesan</p>
             <p className="text-[#D1A240] mb-4">0856 4106 4464 (Owner)</p>
             <p className="text-[#D1A240]">0852 9094 3434 (Admin)</p>
           </div>
         </div>
       </section>
-
-
-
-
       <Footer />
     </>
   );
