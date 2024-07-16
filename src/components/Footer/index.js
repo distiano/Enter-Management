@@ -7,79 +7,67 @@ const inriasans = Inria_Sans({
 
 const Footer = () => {
   return (
-    <footer className="bg-white px-6 lg:px-16 border-t-4">
-      <div className={`${inriasans.className} mx-auto max-w-screen-xl space-y-8 px-4 py-10 sm:px-6 lg:space-y-16 lg:px-8`}>
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 ">
+    <footer className="  border-t-4 lg:bg-right " style={{ backgroundImage: "url('/images/bgfooter.png')", backgroundRepeat: 'no-repeat' }}>
+      <div className={`${inriasans.className} bg-gradient-to-l from-[#FDFDFD00] to-[#FDFDFD] backdrop-brightness-150  mx-auto max-w-screen-xl space-y-8 px-4  sm:px-6 lg:space-y-16 lg:px-8 pb-5`}>
+        <div className=" grid grid-cols-1 gap-8  px-6 lg:px-12  border-b-4 border-[#D1D1D1] w-full py-5">
           <div>
             <div className="text-teal-600">
-              <img src="/images/Logo.png" className="h-12 w-auto" alt="" />
+              <img src="/images/Logo.png" className="h-16 w-auto" alt="" />
             </div>
 
-            <p className={` text-black mt-4`}>Purwosari, Kec. Kota Kudus, Kabupaten Kudus, Jawa Tengah 59316 (Enter Management Kudus)</p>
+            {/* <p className={` text-black mt-4 w-[400px]`}>Purwosari, Kec. Kota Kudus, Kabupaten Kudus, Jawa Tengah 59316 (Enter Management Kudus)</p> */}
           </div>
 
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2  lg:grid-cols-2">
+          <div className="flex gap-16 ">
             <div>
-              <ul className="mt-6 space-y-4 text-sm">
+              <ul className=" space-y-4 text-sm">
                 <li>
                   <a href="#" className=" transition hover:opacity-75">
-                    Payment Method{' '}
+                    Home
                   </a>
                 </li>
 
                 <li>
                   <a href="#" className=" transition hover:opacity-75">
-                    Partner{' '}
+                    Services
                   </a>
                 </li>
 
                 <li>
                   <a href="#" className=" transition hover:opacity-75">
-                    FAQ{' '}
+                    Portofolio
                   </a>
                 </li>
-
                 <li>
                   <a href="#" className=" transition hover:opacity-75">
-                    Contact{' '}
+                    About Us
                   </a>
                 </li>
               </ul>
             </div>
-
             <div>
-              <ul className="mt-6 space-y-4 text-sm">
-                <li>
-                  <a href="#" className=" transition hover:opacity-75">
-                    Home{' '}
-                  </a>
-                </li>
+              <ul className=" space-y-4 text-sm">
+                <a href="#" className=" transition hover:opacity-75">
+                  Payment Method
+                </a>
 
-                <li>
-                  <a href="#" className=" transition hover:opacity-75">
-                    Services{' '}
-                  </a>
-                </li>
+                <div className="flex flex-wrap w-3/4 gap-4 ">
+                  <img src="/images/bri.png" className=" transition hover:opacity-75"></img>
 
-                <li>
-                  <a href="#" className=" transition hover:opacity-75">
-                    Portofolio{' '}
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className=" transition hover:opacity-75">
-                    About Us{' '}
-                  </a>
-                </li>
+                  <img src="/images/bca.png" className=" transition hover:opacity-75"></img>
+
+                  <img src="/images/mandiri.png" className=" transition hover:opacity-75"></img>
+                </div>
               </ul>
             </div>
           </div>
-          <div className="flex justify-end items-end gap-4 border-b-4 border-black w-full pb-5">
-            <img src="/images/Instagram.png" className=" w-auto" alt="" />
-            <img src="/images/Whatsapp.png" className=" w-auto" alt="" />
+          <div className="flex justify-end items-end gap-4">
+            <p className="text-xs lg:text-sm text-white">&copy; 2022. Company Name. All rights reserved.</p>
+
+            <img src="/images/Instagram-white.png" className=" w-8" alt="" />
+            <img src="/images/Whatsapp-white.png" className=" w-8" alt="" />
           </div>
         </div>
-        <p className="text-xs text-gray-500">&copy; 2022. Company Name. All rights reserved.</p>
       </div>
     </footer>
   );

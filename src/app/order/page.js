@@ -95,7 +95,7 @@ const Order = () => {
             </div>
             <p className="text-xs mt-2">*Jika ada yang perlu ditambahkan lagi tentang order anda, silahkan hubungi kami via WhatsApp ke 08555555555.</p>
             <div className="flex mt-6">
-              <Link href="/order" className="bg-black text-[#d8ab39] px-8 py-2 rounded-lg   leading-6 text-center hover:bg-red-800 transition duration-300 ease-in-out">
+              <Link href="/order" className="bg-black text-[#B79C55] px-8 py-2 rounded-lg   leading-6 text-center hover:bg-[#B79C55] hover:text-white transition duration-300 ease-in-out">
                 Kirim
               </Link>
             </div>
