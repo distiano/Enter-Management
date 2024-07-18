@@ -22,45 +22,45 @@ const weddingCarousel = [{ image: '/images/Rectangle 31.png' }, { image: '/image
 const eventCarousel = [{ image: '/images/Rectangle 35.png' }, { image: '/images/Rectangle 34.png' }, { image: '/images/Rectangle 33.png' }, { image: '/images/Rectangle 32.png' }];
 
 export default function About() {
-  const weddingScrollRef = useRef(null);
-  const eventScrollRef = useRef(null);
+  // const weddingScrollRef = useRef(null);
+  // const eventScrollRef = useRef(null);
 
-  useEffect(() => {
-    const scrollContainer = weddingScrollRef.current;
-    const scrollStep = 1;
-    const scrollInterval = 20;
+  // useEffect(() => {
+  //   const scrollContainer = weddingScrollRef.current;
+  //   const scrollStep = 1;
+  //   const scrollInterval = 20;
 
-    const autoScroll = setInterval(() => {
-      if (scrollContainer.scrollWidth > scrollContainer.clientWidth) {
-        scrollContainer.scrollLeft += scrollStep;
-        if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
-          scrollContainer.scrollLeft = 0;
-        }
-      }
-    }, scrollInterval);
+  //   const autoScroll = setInterval(() => {
+  //     if (scrollContainer.scrollWidth > scrollContainer.clientWidth) {
+  //       scrollContainer.scrollLeft += scrollStep;
+  //       if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+  //         scrollContainer.scrollLeft = 0;
+  //       }
+  //     }
+  //   }, scrollInterval);
 
-    return () => clearInterval(autoScroll);
-  }, []);
+  //   return () => clearInterval(autoScroll);
+  // }, []);
 
-  useEffect(() => {
-    const scrollContainer = eventScrollRef.current;
-    const scrollStep = 1;
-    const scrollInterval = 20;
+  // useEffect(() => {
+  //   const scrollContainer = eventScrollRef.current;
+  //   const scrollStep = 1;
+  //   const scrollInterval = 20;
 
-    const autoScroll = setInterval(() => {
-      if (scrollContainer.scrollWidth > scrollContainer.clientWidth) {
-        scrollContainer.scrollLeft -= scrollStep;
-        if (scrollContainer.scrollLeft <= 0) {
-          scrollContainer.scrollLeft = scrollContainer.scrollWidth / 2;
-        }
-      }
-    }, scrollInterval);
+  //   const autoScroll = setInterval(() => {
+  //     if (scrollContainer.scrollWidth > scrollContainer.clientWidth) {
+  //       scrollContainer.scrollLeft -= scrollStep;
+  //       if (scrollContainer.scrollLeft <= 0) {
+  //         scrollContainer.scrollLeft = scrollContainer.scrollWidth / 2;
+  //       }
+  //     }
+  //   }, scrollInterval);
 
-    return () => clearInterval(autoScroll);
-  }, []);
+  //   return () => clearInterval(autoScroll);
+  // }, []);
 
-  const duplicatedWeddingCarousel = [...weddingCarousel, ...weddingCarousel];
-  const duplicatedEventCarousel = [...eventCarousel, ...eventCarousel];
+  // const duplicatedWeddingCarousel = [...weddingCarousel, ...weddingCarousel];
+  // const duplicatedEventCarousel = [...eventCarousel, ...eventCarousel];
 
   return (
     <>
@@ -73,7 +73,7 @@ export default function About() {
           </div>
         </div>
       </section>{' '}
-      <section className="py-10">
+      {/* <section className="py-10">
         <div className="flex space-x-4 overflow-hidden px-2" ref={weddingScrollRef}>
           {duplicatedWeddingCarousel.map((item, idx) => (
             <div key={idx} className=" flex-shrink-0 py-2 w-[60vw] lg:w-[20vw]">
@@ -88,11 +88,11 @@ export default function About() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
       <section className="px-6 lg:px-28 py-16">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-24">
           <div className="text-center">
-            <h2 className={`${inriaserif.className} text-[#9E7A30] text-3xl font-bold`}>Mengapa Enter Management Diciptakan?</h2>
+            <h2 className={`${inriaserif.className} text-[#9E7A30] text-3xl font-bold`}>Enter Management</h2>
             <p className="mt-6 text-justify">
               Lorem ipsum dolor sit amet consectetur. Nunc eget lacus sagittis eget varius elementum scelerisque neque. Nam sem erat ullamcorper sit egestas cursus. Vitae adipiscing proin rutrum sit vivamus augue fames vulputate massa.
               Purus luctus eros turpis eleifend vitae ultricies. Arcu erat duis blandit sed velit enim nec elementum aenean. Adipiscing nulla eu neque nisl faucibus faucibus. Pretium magna condimentum facilisis posuere natoque ultricies
@@ -100,7 +100,7 @@ export default function About() {
             </p>
           </div>
           <div className="text-center">
-            <h2 className={`${inriaserif.className} text-[#9E7A30] text-3xl font-bold`}>Apa Saja Layanan Dari Enter Management?</h2>
+            <h2 className={`${inriaserif.className} text-[#9E7A30] text-3xl font-bold`}>Visi & Misi Enter Management</h2>
             <p className="mt-6 text-justify">
               Lorem ipsum dolor sit amet consectetur. Nunc eget lacus sagittis eget varius elementum scelerisque neque. Nam sem erat ullamcorper sit egestas cursus. Vitae adipiscing proin rutrum sit vivamus augue fames vulputate massa.
               Purus luctus eros turpis eleifend vitae ultricies. Arcu erat duis blandit sed velit enim nec elementum aenean. Adipiscing nulla eu neque nisl faucibus faucibus. Pretium magna condimentum facilisis posuere natoque ultricies
@@ -127,7 +127,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="py-16 px-6 lg:px-16 bg-gradient-to-b from-[#9E7A30] to-white">
+      {/* <section className="py-16 px-6 lg:px-16 bg-gradient-to-b from-[#9E7A30] to-white">
         <h2 className={`${inriaserif.className}  text-3xl font-bold text-center`}>Tim Enter Management</h2>
         <div className="grid  lg:grid-cols-4 gap-8 mt-16">
           <div className="block">
@@ -179,7 +179,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* <section className="py-16 lg:px-24">
         <div className="relative py-20 rounded-xl" style={{ backgroundImage: "url('/images/bg-footer-barra3.png')", backgroundSize: 'cover', backgroundPosition: 'center', height: '50vh' }}>
           <div className="absolute rounded-xl inset-0 bg-gradient-to-r from-transparent via-[#FED8D8] to-[#FED8D8]"></div>
