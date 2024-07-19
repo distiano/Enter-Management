@@ -31,7 +31,7 @@ export default function Home() {
               <span className="">Percayakan kelancaran momen penting Anda bersama kru andalan dari Enter Management</span>
             </h1>
             <div className="lg:flex lg:flex-1 lg:justify-center mt-6">
-              <Link href="#" className={`${inriasans.className}  bg-[#AD4740] px-5 py-3 rounded-lg text-base font-bold leading-6 text-white text-center hover:bg-red-800 transition duration-300 ease-in-out`}>
+              <Link href="https://wa.me/6285641064464" className={`${inriasans.className}  bg-[#AD4740] px-5 py-3 rounded-lg text-base font-bold leading-6 text-white text-center hover:bg-red-800 transition duration-300 ease-in-out`}>
                 Contact Us
               </Link>
             </div>

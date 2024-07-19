@@ -37,10 +37,10 @@ const Gallery = () => {
           </div>
           <div className="grid grid-rows-2 gap-2">
             <div>
-              <img src="/images/gallery-compressed/foto1.JPG" className="size-full object-cover" />
+              <img src="/images/gallery-compressed/foto1.jpg" className="size-full object-cover" />
             </div>
             <div className="">
-              <img src="/images/gallery-compressed/foto2.JPG" className="size-full object-cover" />
+              <img src="/images/gallery-compressed/foto2.jpg" className="size-full object-cover" />
             </div>
           </div>
           {/*  */}
@@ -49,7 +49,7 @@ const Gallery = () => {
             <img src="/images/gallery-compressed/foto3.jpg" className="size-full object-cover" />
           </div>
           <div>
-            <img src="/images/gallery-compressed/foto4.JPG" className="size-full object-cover" />
+            <img src="/images/gallery-compressed/foto4.jpg" className="size-full object-cover" />
           </div>
           <div className="">
             <img src="/images/gallery-compressed/foto5.jpg" className="size-full object-cover" />
@@ -73,10 +73,10 @@ const Gallery = () => {
             <img src="/images/gallery-compressed/foto8.jpg" className="size-full object-cover" />
           </div>
           <div>
-            <img src="/images/gallery-compressed/foto9.JPG" className="size-full object-cover" />
+            <img src="/images/gallery-compressed/foto9.jpg" className="size-full object-cover" />
           </div>
           <div className="">
-            <img src="/images/gallery-compressed/foto10.JPG" className="size-full object-cover" />
+            <img src="/images/gallery-compressed/foto10.jpg" className="size-full object-cover" />
           </div>
           {/*  */}
           {/* 1-2 */}
@@ -85,31 +85,31 @@ const Gallery = () => {
           </div>
           <div className="grid grid-rows-2 gap-2">
             <div>
-              <img src="/images/gallery-compressed/foto11.JPG" className="size-full object-cover" />
+              <img src="/images/gallery-compressed/foto11.jpg" className="size-full object-cover" />
             </div>
             <div className="">
-              <img src="/images/gallery-compressed/foto12.JPG" className="size-full object-cover" />
+              <img src="/images/gallery-compressed/foto12.jpg" className="size-full object-cover" />
             </div>
           </div>
           {/*  */}
           {/* 3 */}
           <div className="">
-            <img src="/images/gallery-compressed/foto13.JPG" className="size-full object-cover" />
+            <img src="/images/gallery-compressed/foto13.jpg" className="size-full object-cover" />
           </div>
           <div>
-            <img src="/images/gallery-compressed/foto14.JPG" className="size-full object-cover" />
+            <img src="/images/gallery-compressed/foto14.jpg" className="size-full object-cover" />
           </div>
           <div className="">
-            <img src="/images/gallery-compressed/foto15.JPG" className="size-full object-cover" />
+            <img src="/images/gallery-compressed/foto15.jpg" className="size-full object-cover" />
           </div>
           {/*  */}
           {/* 2-1 */}
           <div className="grid grid-rows-2 gap-2">
             <div>
-              <img src="/images/gallery-compressed/foto16.JPG" className="size-full object-cover" />
+              <img src="/images/gallery-compressed/foto16.jpg" className="size-full object-cover" />
             </div>
             <div className="">
-              <img src="/images/gallery-compressed/foto17.JPG" className="size-full object-cover" />
+              <img src="/images/gallery-compressed/foto17.jpg" className="size-full object-cover" />
             </div>
           </div>
           <div className="col-span-2">
@@ -118,13 +118,13 @@ const Gallery = () => {
           {/*  */}
           {/* 3 */}
           <div className="">
-            <img src="/images/gallery-compressed/foto18.JPG" className="size-full object-cover" />
+            <img src="/images/gallery-compressed/foto18.jpg" className="size-full object-cover" />
           </div>
           <div>
-            <img src="/images/gallery-compressed/foto19.JPG" className="size-full object-cover" />
+            <img src="/images/gallery-compressed/foto19.jpg" className="size-full object-cover" />
           </div>
           <div className="">
-            <img src="/images/gallery-compressed/foto20.JPG" className="size-full object-cover" />
+            <img src="/images/gallery-compressed/foto20.jpg" className="size-full object-cover" />
           </div>
           {/*  */}
         </div>

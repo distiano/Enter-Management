@@ -37,7 +37,7 @@ const Order = () => {
     const { nama, tanggal, alamat, email, layanan, pesan } = form;
     const formattedDate = new Date(tanggal).toLocaleDateString('id-ID');
     const message = `FORM ORDER ENTER MANAGEMENT\n\nNama: ${nama}\nTanggal: ${formattedDate}\nAlamat: ${alamat}\nEmail: ${email}\nLayanan: ${layanan}\nPesan: ${pesan}`;
-    const whatsappUrl = `https://wa.me/6281912035119?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/6285641064464?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -162,7 +162,7 @@ const Order = () => {
                 ></textarea>
               </div>
               <p className="text-xs mt-2">
-                *Jika ada yang perlu ditambahkan lagi tentang order anda, silahkan hubungi kami via WhatsApp ke 08555555555.
+                *Jika ada yang perlu ditambahkan lagi tentang order anda, silahkan hubungi kami via WhatsApp ke 0856-4106-4464.
               </p>
               <div className="flex mt-6">
                 <button
