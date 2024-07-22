@@ -1,5 +1,7 @@
 import { Inter, Inria_Sans } from 'next/font/google';
 import './globals.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const inter = Inter({ subsets: ['latin'] });
 

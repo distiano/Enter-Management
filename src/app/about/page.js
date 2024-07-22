@@ -6,6 +6,8 @@ import { Inria_Serif, Inria_Sans } from 'next/font/google';
 import Link from 'next/link';
 import { useRef, useEffect } from 'react';
 import Image from 'next/image';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const inriaserif = Inria_Serif({
   subsets: ['latin'],
@@ -62,6 +64,12 @@ export default function About() {
   // const duplicatedWeddingCarousel = [...weddingCarousel, ...weddingCarousel];
   // const duplicatedEventCarousel = [...eventCarousel, ...eventCarousel];
 
+  useEffect(() => {
+    AOS.init({
+      once: true,
+    });
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -91,7 +99,7 @@ export default function About() {
       </section> */}
       <section className="px-6 lg:px-28 py-16">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-24">
-          <div className="text-center">
+          <div className="text-center" data-aos="fade-right" data-aos-duration="2500">
             <h2 className={`${inriaserif.className} text-[#9E7A30] text-3xl font-bold`}>Enter Management</h2>
             <p className="mt-6 text-justify">
               Lorem ipsum dolor sit amet consectetur. Nunc eget lacus sagittis eget varius elementum scelerisque neque. Nam sem erat ullamcorper sit egestas cursus. Vitae adipiscing proin rutrum sit vivamus augue fames vulputate massa.
@@ -99,7 +107,7 @@ export default function About() {
               gravida feugiat nunc. Tincidunt et enim ut lectus non at. Tristique mi quisque ac praesent augue rhoncus donec.
             </p>
           </div>
-          <div className="text-center">
+          <div className="text-center" data-aos="fade-left" data-aos-duration="2500">
             <h2 className={`${inriaserif.className} text-[#9E7A30] text-3xl font-bold`}>Visi & Misi Enter Management</h2>
             <p className="mt-6 text-justify">
               Lorem ipsum dolor sit amet consectetur. Nunc eget lacus sagittis eget varius elementum scelerisque neque. Nam sem erat ullamcorper sit egestas cursus. Vitae adipiscing proin rutrum sit vivamus augue fames vulputate massa.
@@ -109,7 +117,7 @@ export default function About() {
           </div>
         </div>
         <div>
-          <div className="text-center mt-16">
+          <div className="text-center mt-16" data-aos="fade-up" data-aos-duration="2500">
             <h2 className={`${inriaserif.className}  text-3xl font-bold`}>
               Mengapa Enter Management Menjadi <span className="text-[#9E7A30]">Pilihan Terbaik</span> Anda?
             </h2>
@@ -203,7 +211,7 @@ export default function About() {
         className="py-20"
       >
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center px-4">
-          <div className="w-[400px] md:w-1/2 p-4">
+          <div className="w-[400px] md:w-1/2 p-4" data-aos="fade-right" data-aos-duration="2500">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.664287000795!2d110.82624857401579!3d-6.810626966611726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70c5f6f4c5ac7f%3A0x61b5fe6a88c52a33!2sEnter%20Management%20Kudus%20WO%2FEO!5e0!3m2!1sen!2sid!4v1721152177273!5m2!1sen!2sid"
               width="100%"
@@ -216,7 +224,7 @@ export default function About() {
               loading="lazy"
             ></iframe>
           </div>
-          <div className="md:w-1/2 p-4">
+          <div className="md:w-1/2 p-4" data-aos="fade-left" data-aos-duration="2500">
             <h2 className={`${inriaserif.className} text-4xl font-bold mb-4 text-[#6F541E]`}>Hubungi Kami</h2>
             <div className={`${inriasans.className}`}>
               <p className="text-lg font-semibold text-[#6F541E] mb-2">Alamat</p>
