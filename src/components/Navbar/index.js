@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Dialog } from '@headlessui/react';
+import { Dialog, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { Inria_Serif, Inria_Sans } from 'next/font/google';
@@ -20,8 +20,6 @@ const navigation = [
   { name: 'About Us', href: '/about' },
   { name: 'Gallery', href: '/gallery' },
   { name: 'Price List', href: '/pricelist' },
-
-  // { name: 'Portofolio', href: '/portofolio' },
 ];
 
 export default function Example() {
@@ -32,11 +30,7 @@ export default function Example() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
-      if (scrollTop > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(scrollTop > 0);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -47,13 +41,13 @@ export default function Example() {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 ${isScrolled ? 'bg-opacity-100' : 'bg-opacity-30'}`} style={{ transition: 'background-color 0.3s ease', background: 'linear-gradient(90deg, #B4903A, #FFFEA6 50%, #B4903A)' }}>
-      <nav className="flex items-center justify-between p-4 lg:p-2 lg:px-8 shadow-lg" aria-label="Global">
+      <nav className="flex items-center justify-between p-3 lg:p-2 lg:px-8 shadow-lg" aria-label="Global">
         <div className="flex items-center lg:flex-1 lg:justify-start">
-          <div className=" lg:static lg:transform-none">
+          <div className="lg:static lg:transform-none">
             <Link href="/" className="flex items-center">
               <span className="sr-only">Your Company</span>
               <img src="/images/EnterManagementKudus-logo.png" className="h-12 w-auto" alt="Enter Management Kudus Logo" />
-              <div className="ml-4 font-bold  lg:text-2xl text-black">
+              <div className="ml-4 font-bold lg:text-2xl text-black">
                 <span className={inriaserif.className}>ENTER MANAGEMENT KUDUS</span>
               </div>
             </Link>
@@ -69,7 +63,7 @@ export default function Example() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`relative text-black rounded-md px-3 py-2  text-sm font-bold transition-all duration-300 ease-in-out after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#574315ce] after:transition-all after:duration-300 hover:after:w-full hover:font-bold ${
+                className={`relative text-black rounded-md px-3 py-2 text-sm font-bold transition-all duration-300 ease-in-out after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#574315ce] after:transition-all after:duration-300 hover:after:w-full hover:font-bold ${
                   pathname === item.href ? 'text-[#574315] font-bold after:w-full' : ''
                 }`}
               >
@@ -84,40 +78,68 @@ export default function Example() {
           </div>
         </div>
       </nav>
-      <Dialog as="div" className="lg:hidden " open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-        <div className="fixed inset-0 z-50" />
-        <Dialog.Panel
-          className="fixed  inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-4 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
-          style={{ transition: 'background-color 0.3s ease', background: 'linear-gradient(90deg, #B4903A, #FFFEA6 )' }}
-        >
-          <div className="flex items-center justify-between">
-            <Link href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              <img className="h-8 w-auto" src="/images/EnterManagementKudus-logo.png" alt="" />
-            </Link>
-            <button type="button" className="-m-2.5 rounded-md p-2.5 text-gray-700" onClick={() => setMobileMenuOpen(false)}>
-              <span className="sr-only">Close menu</span>
-              <XMarkIcon className="h-6 w-6 hover:font-bold" aria-hidden="true" />
-            </button>
-          </div>
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
-                {navigation.map((item) => (
-                  <Link key={item.name} href={item.href} className={`-mx-3 block rounded-lg px-3 py-2 font-normal leading-7  hover:font-bold transition duration-300 ease-in-out`}>
-                    {item.name}
-                  </Link>
-                ))}
-                <div className="lg:flex lg:flex-1 lg:justify-end pt-4">
-                  <Link href="/order" className="bg-black px-8 py-3 rounded-lg text-sm font-semibold leading-6 text-white text-center hover:bg-gray-800 transition duration-300 ease-in-out">
-                    Order Now
-                  </Link>
+      <Transition show={mobileMenuOpen} as="div">
+        <Dialog as="div" onClose={() => setMobileMenuOpen(false)} className="relative z-50">
+          <Transition.Child
+            as="div"
+            enter="transition-opacity duration-300 ease-in-out"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="transition-opacity duration-300 ease-in-out"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+            className="fixed inset-0 bg-black/30"
+          />
+          <Transition.Child
+            as="div"
+            enter="transition-transform duration-300 ease-in-out"
+            enterFrom="translate-x-full"
+            enterTo="translate-x-0"
+            leave="transition-transform duration-300 ease-in-out"
+            leaveFrom="translate-x-0"
+            leaveTo="translate-x-full"
+            className="fixed inset-y-0 right-0 z-50 w-full max-w-sm bg-white overflow-y-auto"
+          >
+            <Dialog.Panel className="px-4 py-6 h-screen" style={{ background: 'linear-gradient(90deg, #B4903A, #FFFEA6 )' }}>
+              <div className="flex items-center justify-between">
+                <Link href="#" className="-m-1.5 p-1.5 flex items-center">
+                  <span className="sr-only">Your Company</span>
+                  <img className="h-8 w-auto" src="/images/EnterManagementKudus-logo.png" alt="" />
+                  <div className="ml-2 font-bold text-black">
+                    <span className={inriaserif.className}>ENTER MANAGEMENT KUDUS</span>
+                  </div>
+                </Link>
+                <button type="button" className="-m-2.5 rounded-md p-2.5 text-gray-700" onClick={() => setMobileMenuOpen(false)}>
+                  <span className="sr-only">Close menu</span>
+                  <XMarkIcon className="h-6 w-6 hover:font-bold" aria-hidden="true" />
+                </button>
+              </div>
+              <div className="mt-6 flow-root">
+                <div className="-my-6 divide-y divide-gray-500/10">
+                  <div className="space-y-2 py-6">
+                    {navigation.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className={`-mx-3 block px-3 py-2 font-medium leading-5 text-sm transition-all duration-300 ease-in-out after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#574315ce] after:transition-all after:duration-300 hover:after:w-full hover:font-bold ${
+                          pathname === item.href ? 'text-[#574315] font-bold after:w-full' : ''
+                        }`}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                    <div className="lg:flex lg:flex-1 lg:justify-end pt-4">
+                      <Link href="/order" className="bg-black px-8 py-3 rounded-lg text-sm font-semibold leading-6 text-white text-center hover:bg-gray-800 transition duration-300 ease-in-out">
+                        Order Now
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </Dialog.Panel>
-      </Dialog>
+            </Dialog.Panel>
+          </Transition.Child>
+        </Dialog>
+      </Transition>
     </header>
   );
 }
