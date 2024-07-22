@@ -199,7 +199,7 @@ export default function Home() {
           </div>
         </section>
       </div>
-      <section className="text-center" data-aos="fade-up" data-aos-duration="2000">
+      <section className="text-center" data-aos="zoom-in" data-aos-duration="2000">
         <img src="/images/ENTER MANAGEMENT_ARTIS.png" alt="Wedding Party" className="rounded-lg w-full" />
       </section>
       <section
@@ -225,7 +225,7 @@ export default function Home() {
               loading="lazy"
             ></iframe>
           </div>
-          <div className="md:w-1/2 p-4" data-aos="fade-down" data-aos-duration="2000">
+          <div className="md:w-1/2 p-4" data-aos="fade-up" data-aos-duration="2000">
             <h2 className={`${inriaserif.className} text-4xl font-bold mb-4 text-[#6F541E]`}>Hubungi Kami</h2>
             <div className={`${inriasans.className}`}>
               <p className="text-lg font-semibold text-[#6F541E] mb-2">Alamat</p>
