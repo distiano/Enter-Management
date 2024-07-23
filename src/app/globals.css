@@ -73,26 +73,3 @@ body {
   position: relative;
   z-index: 2;
 }
-
-/* Add these styles to your CSS file */
-.dialog-enter {
-  opacity: 0;
-  transform: translateX(100%);
-}
-
-.dialog-enter-active {
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.dialog-exit {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.dialog-exit-active {
-  opacity: 0;
-  transform: translateX(100%);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}

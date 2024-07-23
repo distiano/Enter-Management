@@ -39,7 +39,7 @@ const Gallery = () => {
         <div className="grid grid-cols-3 gap-2 lg:gap-4">
           {/* 1-2 */}
           <div className="col-span-2" data-aos="fade-up" data-aos-duration="2000">
-            <iframe src="https://drive.google.com/file/d/1kGcz-LJAXf6V2ojLiyPgly2DkOebC0wN/preview" className="size-full object-cover" allowfullscreen></iframe>
+            <iframe src="https://drive.google.com/file/d/1kGcz-LJAXf6V2ojLiyPgly2DkOebC0wN/preview" className="size-full object-cover" allowFullScreen></iframe>
           </div>
           <div className="grid grid-rows-2 gap-2">
             <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100">
@@ -71,7 +71,7 @@ const Gallery = () => {
             </div>
           </div>
           <div className="col-span-2" data-aos="fade-up" data-aos-duration="2000">
-            <iframe src="https://drive.google.com/file/d/187fMONjBYGSPnIZosBEGEnBXv0M4iPaH/preview" className="size-full object-cover" allowfullscreen></iframe>
+            <iframe src="https://drive.google.com/file/d/187fMONjBYGSPnIZosBEGEnBXv0M4iPaH/preview" className="size-full object-cover" allowFullScreen></iframe>
           </div>
           {/*  */}
           {/* 3 */}
@@ -87,7 +87,7 @@ const Gallery = () => {
           {/*  */}
           {/* 1-2 */}
           <div className="col-span-2" data-aos="fade-up" data-aos-duration="2000">
-            <iframe src="https://drive.google.com/file/d/1m7aDs8s7luy8PCziCOKZeVYrQ7mMBptp/preview" className="size-full object-cover" allowfullscreen></iframe>
+            <iframe src="https://drive.google.com/file/d/1m7aDs8s7luy8PCziCOKZeVYrQ7mMBptp/preview" className="size-full object-cover" allowFullScreen></iframe>
           </div>
           <div className="grid grid-rows-2 gap-2">
             <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100">
@@ -119,7 +119,7 @@ const Gallery = () => {
             </div>
           </div>
           <div className="col-span-2" data-aos="fade-up" data-aos-duration="2000">
-            <iframe src="https://drive.google.com/file/d/1b8z0pAvlxfv5YCXE4swEcQZxXvwiFO1m/preview" className="size-full object-cover" allowfullscreen></iframe>
+            <iframe src="https://drive.google.com/file/d/1b8z0pAvlxfv5YCXE4swEcQZxXvwiFO1m/preview" className="size-full object-cover" allowFullScreen></iframe>
           </div>
           {/*  */}
           {/* 3 */}
