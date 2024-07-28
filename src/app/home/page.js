@@ -20,7 +20,7 @@ const inriasans = Inria_Sans({
   weight: ['300', '400', '700'],
 });
 
-const images = ['/images/display.png', '/images/gallery/foto1.jpg', '/images/gallery/foto4.jpg'];
+const images = ['/images/gallery/foto1.jpg', '/images/gallery/foto7.jpg', '/images/gallery/foto4.jpg', '/images/gallery/foto5.jpg'];
 
 export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
